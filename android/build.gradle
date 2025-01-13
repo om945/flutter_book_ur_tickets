@@ -1,0 +1,22 @@
+dependencies {
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    implementation 'com.android.support:support-annotations:27.1.1'
+}
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

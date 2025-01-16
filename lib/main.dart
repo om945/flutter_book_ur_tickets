@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book_ur_tickets/pages/home.dart';
-import 'package:flutter_book_ur_tickets/pages/intro.dart';
 
 void main() {
   runApp(const MyApp());

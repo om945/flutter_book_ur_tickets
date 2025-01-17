@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_book_ur_tickets/pages/drawer.dart';
 import 'package:flutter_book_ur_tickets/pages/login.dart';
 import 'package:flutter_book_ur_tickets/pages/movie.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,6 +22,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: MyDrawer(),
         bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.black,
             items: <BottomNavigationBarItem>[
@@ -54,6 +56,7 @@ class Homepage extends StatelessWidget {
               }));
             }),
         appBar: AppBar(
+          // toolbarHeight: 100,
           excludeHeaderSemantics: false,
           scrolledUnderElevation: 120,
           forceMaterialTransparency: true,

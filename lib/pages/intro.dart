@@ -33,7 +33,9 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
         () => Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) => Login(),
+              pageBuilder: (context, animation, secondaryAnimation) => Login(
+                Email: '',
+              ),
             )));
   }
 

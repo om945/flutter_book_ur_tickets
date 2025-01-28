@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_book_ur_tickets/pages/login.dart';
@@ -15,27 +14,29 @@ class Intro extends StatefulWidget {
 
 class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation<double> animation;
+  Animation<double>? animation;
 
   @override
   void initState() {
-    animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1000));
-    animation = CurvedAnimation(
-        parent: animationController,
-        curve: Curves.bounceOut,
-        reverseCurve: Curves.bounceInOut);
-    animationController.forward();
     super.initState();
+    Future.delayed(Duration(seconds: 1), () {
+      setState(() {
+        animationController = AnimationController(
+            vsync: this, duration: Duration(milliseconds: 800));
+        animation = CurvedAnimation(
+            parent: animationController,
+            curve: Curves.bounceOut,
+            reverseCurve: Curves.bounceInOut);
+        animationController.forward();
+      });
+    });
 
     Timer(
-        const Duration(milliseconds: 2500),
+        const Duration(milliseconds: 2200),
         () => Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) => Login(
-                Email: '',
-              ),
+              pageBuilder: (context, animation, secondaryAnimation) => Login(),
             )));
   }
 
@@ -69,7 +70,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
         ),
         child: Center(
           child: ScaleTransition(
-            scale: animation,
+            scale: animation ?? AlwaysStoppedAnimation(0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -83,7 +84,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text('UR Tickets',
+                Text('Your Tickets',
                     style: TextStyle(
                         fontSize: 40,
                         fontFamily: GoogleFonts.dmSerifText().fontFamily,

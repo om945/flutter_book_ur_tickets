@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book_ur_tickets/pages/home.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/Sambhaji.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/fateh.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/game_chaner.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/marco.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/mufasa.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/pushpa_2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Movie extends StatelessWidget {
@@ -73,9 +79,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/6.jpg",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/6.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return GameChaner();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -131,9 +145,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/fateh.jpg",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/fateh.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Fateh();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -193,9 +215,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/pushpa2.png",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/pushpa2.png",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Pushpa2();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -251,9 +281,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/7.jpg",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/7.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Marco();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -309,9 +347,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/mufasa-lion-king-mobile.png",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/mufasa-lion-king-mobile.png",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Mufasa();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -367,9 +413,17 @@ class Movie extends StatelessWidget {
                     width: 175,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/sambhaji.jpg",
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        child: Image.asset(
+                          "assets/movie/sambhaji.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return Sambhaji();
+                          }));
+                        },
                       ),
                     ),
                   ),
@@ -403,65 +457,7 @@ class Movie extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Dharmarakshak Maha...',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: GoogleFonts.poppins().fontFamily,
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: const Color.fromARGB(37, 255, 255, 255)),
-                        borderRadius: BorderRadius.circular(10)),
-                    padding: EdgeInsets.all(0),
-                    height: 250.0,
-                    width: 175,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        "assets/movie/Emergency.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Container(
-                    width: 170,
-                    padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(148, 0, 0, 0),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: Colors.red,
-                            size: 15,
-                          ),
-                          Text(' 8.2', style: TextStyle(fontSize: 15)),
-                          SizedBox(width: 20),
-                          Text('77.5k', style: TextStyle(fontSize: 15)),
-                          SizedBox(width: 5),
-                          Text(
-                            'votes',
-                            style:
-                                TextStyle(fontSize: 13, color: Colors.white70),
-                          )
-                        ]),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Emergency',
+                        'Dharmarakshak Ma..',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: GoogleFonts.poppins().fontFamily,

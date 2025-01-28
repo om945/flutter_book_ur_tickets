@@ -1,7 +1,7 @@
 // import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_book_ur_tickets/pages/datetime_model.dart';
 import 'package:flutter_book_ur_tickets/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,9 +17,7 @@ TextEditingController name = TextEditingController();
 TextEditingController pass = TextEditingController();
 
 class Login extends StatefulWidget {
-  const Login({super.key, required this.Email});
-
-  final String Email;
+  const Login({super.key});
 
   @override
   State<Login> createState() => _LoginState();
@@ -114,6 +112,7 @@ class _LoginState extends State<Login> {
                         Container(
                           padding: const EdgeInsets.all(10),
                           child: TextFormField(
+                            obscureText: true,
                             controller: pass,
                             decoration: const InputDecoration(
                               labelText: "Password",
@@ -145,7 +144,7 @@ class _LoginState extends State<Login> {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                WidgetStateProperty.all(Colors.black),
+                                WidgetStateProperty.all(Colors.redAccent),
                           ),
                           onPressed: () {
                             setState(() {
@@ -235,10 +234,7 @@ class _LoginState extends State<Login> {
                           },
                           child: Text(
                             'Sign in',
-                            style: TextStyle(
-                              fontFamily: GoogleFonts.poppins().fontFamily,
-                              color: Colors.white,
-                            ),
+                            style: Fontfamily.whiteFont16,
                           ),
                         ),
                         SizedBox(height: 20),

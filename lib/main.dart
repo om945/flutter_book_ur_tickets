@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_book_ur_tickets/pages/home.dart';
 import 'package:flutter_book_ur_tickets/pages/intro.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: Homepage(),
+      home: Intro(),
     );
   }
 }

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book_ur_tickets/pages/drawer.dart';
-import 'package:flutter_book_ur_tickets/pages/login.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/Sambhaji.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/fateh.dart';
 import 'package:flutter_book_ur_tickets/pages/movie.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/game_chaner.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/marco.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/mufasa.dart';
+import 'package:flutter_book_ur_tickets/pages/movie_details/pushpa_2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Gredient {
@@ -12,8 +17,11 @@ class Gredient {
 }
 
 final ScrollController _scrollController = ScrollController();
+final ScrollController scrollController = ScrollController();
 final ScrollController _scrollController1 = ScrollController();
+final ScrollController scrollController1 = ScrollController();
 final ScrollController _scrollController2 = ScrollController();
+final ScrollController scrollController2 = ScrollController();
 final int _selectedIndex = 0;
 
 class Homepage extends StatelessWidget {
@@ -61,7 +69,7 @@ class Homepage extends StatelessWidget {
           scrolledUnderElevation: 120,
           forceMaterialTransparency: true,
           shadowColor: Colors.black,
-          title: Text("Book ur tickets"),
+          title: Text("Book your tickets"),
           centerTitle: true,
           bottom: PreferredSize(
               preferredSize: Size.fromHeight(0),
@@ -129,9 +137,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/fateh.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/fateh.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Fateh();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -194,9 +211,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/6.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/6.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return GameChaner();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -259,9 +285,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/pushpa2.png",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/pushpa2.png",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Pushpa2();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -324,9 +359,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/7.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/7.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Marco();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -389,9 +433,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/mufasa-lion-king-mobile.png",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/mufasa-lion-king-mobile.png",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Mufasa();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -454,9 +507,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/sambhaji.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/sambhaji.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Sambhaji();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -564,9 +626,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/fateh.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/fateh.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Fateh();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -629,9 +700,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/6.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/6.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return GameChaner();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -694,9 +774,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/pushpa2.png",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/pushpa2.png",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Pushpa2();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -759,9 +848,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/7.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/7.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Marco();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -824,9 +922,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/sambhaji.jpg",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/sambhaji.jpg",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Sambhaji();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
@@ -933,9 +1040,18 @@ class Homepage extends StatelessWidget {
                                       width: 175,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          "assets/movie/mufasa-lion-king-mobile.png",
-                                          fit: BoxFit.cover,
+                                        child: InkWell(
+                                          child: Image.asset(
+                                            "assets/movie/mufasa-lion-king-mobile.png",
+                                            fit: BoxFit.cover,
+                                          ),
+                                          onTap: () {
+                                            Navigator.push(context,
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return Mufasa();
+                                            }));
+                                          },
                                         ),
                                       ),
                                     ),
